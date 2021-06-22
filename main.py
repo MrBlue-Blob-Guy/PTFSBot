@@ -21,7 +21,7 @@ def gen_squawk():
 
 
 #ifr function
-def issue_ifr(callsign, dep, arv):
+def issue_ifr(callsign, dep, arv , deprwy ,flinit , flfinal , plane_data):
     Squawk = gen_squawk()
     for reg in reserved_Squawks:
         if Squawk == reg:
@@ -29,7 +29,7 @@ def issue_ifr(callsign, dep, arv):
     for sqks in issued_squawks:
         if Squawk == sqks:
             return
-
+    print(f'{callsign} cleared ifr to {arv} via gps direct departure will be with me expect {deprwy} initial flight level{flinit} expect {flfinal} {flfinal/plane_data.plane.v1}minutes after departure squawking {Squawk}')
 
 #Command Handling
 def handle_commands(command):

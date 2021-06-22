@@ -2,6 +2,7 @@ import random as rand
 
 commands_list = ['-ifr', '-vfr', '-push_and_start', 'cmdlist']
 issued_squawks = []
+#there are litterally more than 100 of these
 reserved_Squawks = [7500, 7600, 7700]
 
 #command functions
@@ -13,7 +14,7 @@ def help():
         print(command)
 
 
-#Generate Squawck code
+#Generate Squawk code
 def gen_squawk():
     sqwakCode = rand.randint(1000, 7777)
     return sqwakCode
